@@ -1,0 +1,211 @@
+
+
+
+.header {
+    padding: 33px 0px 40px 0px;
+    &__divider {
+        border: 1px solid #828282;
+        margin-top: 32px;
+    }
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-bold;
+    font-size: 18px;
+    color: #828282;
+    list-style-type: none;
+    padding: 0;
+    &__link {
+        text-decoration: none;
+        color: #828282;
+        &_active {
+            color: #070707;
+        }
+    }
+}
+
+.introduce {
+    padding: 40px 0 104px 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-family: $font-bold;
+        font-size: 48px;
+        margin: 0;
+    }
+
+    &__descr {
+        font-family: $font-md;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &__lang {
+        font-family: $font-bold;
+        transform: rotate(-90deg);
+        font-size: 16px;
+        .link {
+            text-decoration: none;
+            color: #828282;
+            &_active {
+                color: #070707;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__bg {
+        margin-top: 50px;
+        min-height: 387px;
+        background: url("../img/mainbg.png") center (center / cover) no-repeat;
+    }
+}
+
+.title {
+    font-family: $font-bold;
+    font-size: 34px;
+    color: #070707;
+    text-align: center;
+    margin: 0;
+}
+
+.about {
+    padding: 120px 0 0 0;
+    min-height: 506px;
+    background: #F6F6F6;
+    &__descr {
+        margin: 0 auto;
+        margin-top: 18px;
+        max-width: 425px;
+        font-family: $font-md;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+    }
+}
+
+.skills {
+    padding: 91px 0 111px 0;
+    &__subtitle {
+        font-family: $font-md;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 83px;
+    }
+
+    &__img > img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__name {
+        font-family: $font-bold;
+        margin-top: 24px;
+        text-align: center;
+        color: #828282;
+        font-size: 14px;
+    }
+
+    &__stars {
+        margin-top: 41px;
+        & > img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+}
+
+.portfolio {
+    padding: 113px 0 96px 0;
+    background: #F6F6F6;
+    &__example {
+        margin-top: 47px;
+        min-height: 510px;
+        background: url("../img/portfolio_1.png") center (center / cover) no-repeat;
+        &_2 {
+            background: url("../img/portfolio_2.png") center (center / cover) no-repeat;
+        }
+        &_3 {
+            background: url("../img/portfolio_3.png") center (center / cover) no-repeat;
+        }
+    }
+
+    &__link {
+        margin-top: 45px;
+        font-family: $font-md;
+        font-size: 18px;
+        text-align: center;
+        a {
+            color: #070707;
+        }
+    }
+}
+
+.contacts {
+    padding: 114px 0 123px 0;
+    &__descr {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
+        font-family: $font-md;
+        line-height: 22px;
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        width: 180px;
+        height: 42px;
+        background: black;
+        font-family: $font-bold;
+        font-size: 18px;
+        color: #FFFFFF;
+        text-align: center;
+        border-radius: 12px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-top: 86px;
+        width: 342px;
+        cursor: pointer;
+    }
+
+    &__links {
+        margin-top: 45px;
+        font-family: $font-md;
+        font-size: 14px;
+        text-align: center;
+        line-height: 22px;
+        color: #828282;
+        span {
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: #828282;
+        }
+    }
+}
