@@ -45,14 +45,11 @@
             display: none;
         }
         }
-    }
 
     .skills {
-
         &__subtitle {
             margin-top: 40px;
         }
-        
         &__wrapper {
             flex-direction: column;
             margin-top: 50px;
@@ -65,3 +62,5 @@
             }
         }
     }
+
+}
