@@ -28,7 +28,7 @@
 }
 
 .introduce {
-    padding: 40px 0 104px 0;
+    padding: 0 0 104px 0;
 
     &__wrapper {
         display: flex;
@@ -64,7 +64,9 @@
     &__bg {
         margin-top: 50px;
         min-height: 387px;
-        background: url("../img/mainbg.png") center (center / cover) no-repeat;
+        img {
+            max-width: 100%;
+        }
     }
 }
 
@@ -136,12 +138,8 @@
     &__example {
         margin-top: 47px;
         min-height: 510px;
-        background: url("../img/portfolio_1.png") center (center / cover) no-repeat;
-        &_2 {
-            background: url("../img/portfolio_2.png") center (center / cover) no-repeat;
-        }
-        &_3 {
-            background: url("../img/portfolio_3.png") center (center / cover) no-repeat;
+        img {
+            max-width: 100%;
         }
     }
 
@@ -206,6 +204,10 @@
         a {
             text-decoration: none;
             color: #828282;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
