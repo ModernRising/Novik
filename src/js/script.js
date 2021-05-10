@@ -1,7 +1,4 @@
 
-
-
-
 const toggleActive = function () {
   let link = document.querySelectorAll(".menu__link");
   for (var i = 0; i < link.length; i++) {
@@ -14,3 +11,22 @@ const toggleActive = function () {
 };
 
 toggleActive();
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".c-hamburger");
+  const menu = document.querySelector(".menu");
+  const menuItem = menu.querySelectorAll(".menu__item");
+  
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("is-active");
+    menu.classList.toggle("menu_active");
+
+    menuItem.forEach(item => {
+      item.addEventListener('click', () => {
+          hamburger.classList.toggle('is-active');
+          menu.classList.toggle('menu_active');
+      });
+  });
+  });
+});

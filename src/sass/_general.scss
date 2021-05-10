@@ -9,6 +9,10 @@
     }
 }
 
+nav {
+    position: relative;
+}
+
 
 .menu {
     display: flex;
@@ -23,6 +27,93 @@
         color: #828282;
         &_active {
             color: #070707;
+        }
+    }
+}
+
+.mobile-menu {
+    width: 375px;
+}
+
+.c-hamburger {
+    display: none;
+    position: absolute;
+    right: 0;
+    top:42px;
+    overflow:hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    span {
+        display: block;
+        position: absolute;
+        top: 44px;
+        left: 18px;
+        right: 15px;
+        width: 35px;
+        height: 6px;
+        background: #000000;
+        &::before, &::after {
+            display: block;
+            position: absolute;
+            left: 0;
+            height: 6px;
+            width: 100%;
+            background: #000000;
+            content: "";     
+        }
+        &::before {
+            top: -15px;
+        }
+
+        &::after {
+            bottom: -15px;
+        }
+    }
+
+    &-line {
+        background: none;
+        span {
+            transition: background 0s 0.3s;
+            &::before, &::after {
+                transition-duration: 0.3s, 0.3s;    
+                transition-delay: 0.3s, 0s;  
+            }
+            &::before {
+                transition-property: top, transform;
+            }
+            &::after {
+                transition-property: bottom, transform;
+            }
+        }
+
+    }
+
+}
+
+.is-active {
+    span {
+        background: none;
+        
+        &::before {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+        &::after {
+            bottom: 0;
+            transform: rotate(45deg);
+        }
+        &::before, &::after {    
+            transition-delay: 0, 0.1s;  
+            background: #828282;
         }
     }
 }
@@ -63,9 +154,9 @@
 
     &__bg {
         margin-top: 50px;
-        min-height: 387px;
         img {
             max-width: 100%;
+
         }
     }
 }
@@ -179,6 +270,9 @@
         outline: none;
         border: none;
         cursor: pointer;
+        &:hover {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
     }
 
     &__wrapper {
@@ -187,7 +281,15 @@
         margin: 0 auto;
         margin-top: 86px;
         width: 342px;
+    }
+
+    &__social {
         cursor: pointer;
+        padding-bottom: 2px;
+        &:hover {
+            border-bottom: 2px solid;
+            margin-bottom: -2px;
+        }
     }
 
     &__links {
