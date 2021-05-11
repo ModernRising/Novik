@@ -36,7 +36,7 @@ jQuery(document).ready(function($){
   var linkID = $(this).attr('href');
   $('html, body').animate({ 
     scrollTop: $(linkID).offset().top 
-  }, 'slow');
+  }, 1200);
 });
 });
 
