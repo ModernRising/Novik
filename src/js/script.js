@@ -13,7 +13,7 @@ window.addEventListener("DOMContentLoaded", () => {
   
   toggleActive();
 
-  
+
   const hamburger = document.querySelector(".c-hamburger");
   const menu = document.querySelector(".menu");
   const menuItem = menu.querySelectorAll(".menu__item");
@@ -32,8 +32,11 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 jQuery(document).ready(function($){
-  function scrollToElement (id){
-    $('html, body').animate({scrollTop: $('#' + id).offset().top},);
-  }
+  $(document).on('click', '.menu li a', function() {
+  var linkID = $(this).attr('href');
+  $('html, body').animate({ 
+    scrollTop: $(linkID).offset().top 
+  }, 'slow');
+});
 });
 
