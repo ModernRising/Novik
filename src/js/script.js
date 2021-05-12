@@ -1,4 +1,3 @@
-
 window.addEventListener("DOMContentLoaded", () => {
   const toggleActive = function () {
     let link = document.querySelectorAll(".menu__link");
@@ -10,8 +9,24 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     }
   };
-  
-  toggleActive();
+
+
+/*   const toggleLangLink = function() {
+    let links = document.querySelectorAll(".link");
+    for (let i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function() {
+        let cur = document.getElementsByClassName("link_active");
+        cur[0].className = cur[0].className.replace(" link_active", "");
+        this.className += " link_active";
+      });
+      
+    }
+  }; */
+ /*  toggleLangLink(); */
+
+ toggleActive();
+
+
 
 
   const hamburger = document.querySelector(".c-hamburger");
@@ -31,6 +46,8 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//////////// smooth scroll //////////////
+
 jQuery(document).ready(function($){
   $(document).on('click', '.menu li a', function() {
   var linkID = $(this).attr('href');
@@ -38,5 +55,7 @@ jQuery(document).ready(function($){
     scrollTop: $(linkID).offset().top 
   }, 1200);
 });
+
+
 });
 

@@ -41,8 +41,8 @@ nav {
     display: none;
     position: absolute;
     right: 0;
-    top:42px;
-    overflow:hidden;
+    top: 44px;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     width: 96px;
@@ -139,19 +139,6 @@ nav {
         line-height: 22px;
     }
 
-    &__lang {
-        font-family: $font-bold;
-        transform: rotate(-90deg);
-        font-size: 16px;
-        .link {
-            text-decoration: none;
-            color: #828282;
-            &_active {
-                color: #070707;
-                text-decoration: none;
-            }
-        }
-    }
 
     &__bg {
         margin-top: 50px;
@@ -160,6 +147,21 @@ nav {
         }
         .main-mobile {
             display: none;
+        }
+    }
+}
+
+.lang {
+    font-family: $font-bold;
+    transform: rotate(-90deg);
+    font-size: 16px;
+    .link {
+        text-decoration: none;
+        color: #828282;
+        transition: ease 0.3s;
+        &_active {
+            color: #070707;
+            text-decoration: none;
         }
     }
 }
